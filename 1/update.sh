@@ -4,7 +4,7 @@
 
 content=$(wget https://raw.githubusercontent.com/Sid220/jarvis-extensions/main/run%20in%20terminal/version.txt -q -O -)
 echo "Latest Version: $content"
-ver=$(jq '.extensions[] | select(.name == "run in terminal") | .version' ../../prefs.json)
+ver=$(jq '.extensions[] | select(.name == "run in terminal") | .version' prefs.json)
 temp="${ver%\"}"
 temp="${temp#\"}"
 echo "Current Version: $temp"
